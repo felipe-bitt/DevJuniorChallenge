@@ -10,6 +10,7 @@ class UsersController < ApplicationController
 
   # GET /users/1
   def show
+    PetsUpdateToSiriusJob.perform_later
     render json: @user
   end
 
