@@ -8,8 +8,8 @@ class User < ApplicationRecord
   private
   
   def add_two_pets
-    @pet = Pet.new(name: "pindola", user_id: self.id)
-    @pet = Pet.new(name: "olar", user_id: self.id)
+    pets.create(name: "pindola")
+    pets.create(name: "olar")
   end
 
 end
